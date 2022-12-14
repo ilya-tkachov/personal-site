@@ -7,5 +7,19 @@
     },
     "ecmaVersion": 2020,
     "sourceType": "module"
+  },
+  "rules": {
+    "comma-dangle": ["error", "never"],
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "react/no-array-index-key": "error",
+    "react/jsx-max-props-per-line": [
+      1,
+      {
+        "maximum": 1,
+        "when": "multiline"
+      }
+    ]
   }
 }
