@@ -18,7 +18,7 @@ export default function Error(props: Props) {
 
   return (
     <PageContainer>
-      <div className="flex fixed items-center justify-center space-y-8 flex-col w-full h-64 bottom-0">
+      <div className="flex items-center justify-center space-y-8 flex-col w-full h-64">
         <Button
           className="bg-rose-400 rounded-full text-rose-50"
           size="lg"
