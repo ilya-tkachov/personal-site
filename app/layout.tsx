@@ -17,7 +17,7 @@ export default function RootLayout(props: Props) {
   return (
     <html lang="en" className={`${inter.variable} font-sans`}>
       <head />
-      <body>{children}</body>
+      <body className="bg-slate-100">{children}</body>
     </html>
   )
 }

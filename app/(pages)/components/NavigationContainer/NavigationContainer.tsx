@@ -6,11 +6,13 @@ import CubeContainer from './CubeContainer/CubeContainer'
 export const navigationRoutes = [
   {
     href: '/about',
-    color: 'teal'
+    color: 'purple',
+    shape: 'Box'
   },
   {
     href: '/portfolio',
-    color: 'orange'
+    color: 'orange',
+    shape: 'Octahedron'
   }
 ]
 

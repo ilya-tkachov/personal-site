@@ -1,14 +1,13 @@
 'use client'
 
-import { BBAnchor, Center, RoundedBox, Text3D } from '@react-three/drei'
 import useThemeConfig from '@/modules/hooks/useThemeConfig'
+import { BBAnchor, Center, RoundedBox, Text3D } from '@react-three/drei'
+import { useContext } from 'react'
+import { Vector3 } from 'three'
 import {
   NavigationContext,
   navigationRoutes
-} from '../../NavigationContainer/NavigationContainer'
-import { useContext } from 'react'
-import { Vector3 } from 'three'
-import { Euler } from 'three'
+} from '../../../../NavigationContainer/NavigationContainer'
 
 const anchors = [
   {
