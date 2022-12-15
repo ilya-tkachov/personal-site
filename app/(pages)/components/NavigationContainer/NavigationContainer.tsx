@@ -15,18 +15,18 @@ export const navigationRoutes = [
 ]
 
 const defaultValue = {
-  index: 0,
-  setIndex: (index: number) => {}
+  index: null,
+  setIndex: (index: number | null) => {}
 }
 
 export const NavigationContext = createContext(defaultValue)
 
 export function NavigationContainer(): JSX.Element {
-  const [contextIndex, setContextIndex] = useState(0)
+  const [contextIndex, setContextIndex] = useState<null | number>(null)
 
   const contextValue = {
     index: contextIndex,
-    setIndex: (index: number) => setContextIndex(index)
+    setIndex: (index: number | null) => setContextIndex(index)
   }
 
   return (
