@@ -6,7 +6,8 @@
     "dev": "concurrently \"next dev\" \"tailwindcss -i styles/globals.css -o styles/dist.css -w\"",
     "build": "tailwindcss -m -i styles/globals.css -o styles/dist.css && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "setup": "node ./contentful/setup.js"
   },
   "dependencies": {
     "@next/font": "^13.0.6",
@@ -19,6 +20,8 @@
     "@typescript-eslint/parser": "^5.46.1",
     "autoprefixer": "^10.4.13",
     "concurrently": "^7.6.0",
+    "contentful-import": "^8.5.18",
+    "cross-env": "^7.0.3",
     "eslint": "^8.29.0",
     "eslint-config-next": "13.0.6",
     "framer-motion-3d": "^7.10.0",

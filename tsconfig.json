@@ -24,6 +24,12 @@
       "@/modules/*": ["modules/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "contentful/setup.js"
+  ],
   "exclude": ["node_modules"]
 }
