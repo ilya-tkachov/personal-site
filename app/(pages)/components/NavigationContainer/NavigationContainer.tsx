@@ -33,7 +33,7 @@ export function NavigationContainer(): JSX.Element {
 
   return (
     <NavigationContext.Provider value={contextValue}>
-      <div className="w-full h-full">
+      <div className='w-full h-full'>
         <CubeContainer />
       </div>
     </NavigationContext.Provider>

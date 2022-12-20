@@ -11,14 +11,14 @@ export default function PageHeader(): JSX.Element {
   const config = useThemeConfig()
 
   return (
-    <div className="flex rounded-lg  items-center justify-between">
-      <p className="text-gray-900 text-4xl font-bold">
+    <div className='flex items-center justify-between '>
+      <p className='text-gray-900 text-4xl font-bold'>
         {pathname?.replace('/', '')}
       </p>
-      <Link href="/">
-        <div className="w-9 h-9 ring-1 ring-red-500 rounded-full">
+      <Link href='/'>
+        <div className='w-9 h-9 ring-1 ring-red-500 rounded-full'>
           <ShapeIconCanvas>
-            <ShapeIcon shape={'Dodecahedron'}>
+            <ShapeIcon shape='Dodecahedron'>
               <meshPhongMaterial
                 color={config?.theme?.colors.red[700]}
                 emissive={config?.theme?.colors.red[900]}

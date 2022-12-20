@@ -3,7 +3,7 @@ import {
   buttonSizes,
   ButtonSizes,
   buttonTheme
-} from '@/modules/theme/button-sizes'
+} from '@/modules/theme/button'
 import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react'
 
 interface ButtonProps

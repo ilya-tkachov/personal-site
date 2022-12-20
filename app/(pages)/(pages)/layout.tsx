@@ -18,9 +18,11 @@ export default function PagesLayout(props: Props) {
       <PageBlur />
       <PageContainer>
         <PageContents>
-          <PageHeader />
+          <div className='space-y-8 flex flex-col h-min-full'>
+            <PageHeader />
+            {children}
+          </div>
         </PageContents>
-        <PageContents>{children}</PageContents>
       </PageContainer>
     </>
   )
