@@ -11,8 +11,8 @@ export default function PageHeader(): JSX.Element {
   const config = useThemeConfig()
 
   return (
-    <div className='flex items-center justify-between '>
-      <p className='text-gray-900 text-4xl font-bold'>
+    <div className='flex items-center justify-between'>
+      <p className='text-slate-300 text-4xl font-bold'>
         {pathname?.replace('/', '')}
       </p>
       <Link href='/'>

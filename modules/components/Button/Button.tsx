@@ -2,22 +2,20 @@
 import {
   buttonSizes,
   ButtonSizes,
-  buttonTheme
+  buttonTheme,
+  buttonVariants,
+  ButtonVariants
 } from '@/modules/theme/button'
-import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react'
 
-interface ButtonProps
-  extends DetailedHTMLProps<
-    ButtonHTMLAttributes<HTMLButtonElement>,
-    HTMLButtonElement
-  > {
+interface ButtonProps extends Omit<JSX.IntrinsicElements['button'], ''> {
   size?: ButtonSizes
+  variant?: ButtonVariants
 }
 
 export default function Button(props: ButtonProps): JSX.Element {
-  const { size = 'sm', className, ...rest } = props
+  const { size = 'sm', variant = 'solid', className, ...rest } = props
 
-  const buttonClass = `${buttonTheme} ${buttonSizes[size]}`
+  const buttonClass = `${buttonTheme} ${buttonSizes[size]} ${buttonVariants[variant]}`
 
   // todo add usetransition
 

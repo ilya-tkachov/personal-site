@@ -17,6 +17,7 @@
     ]
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^15.16.2",
     "@next/font": "^13.0.6",
     "@react-three/drei": "^9.46.5",
     "@react-three/fiber": "^8.9.1",
