@@ -2,28 +2,23 @@
 
 import useThemeConfig from '@/modules/hooks/useThemeConfig'
 import { BBAnchor, Center, RoundedBox, Text3D } from '@react-three/drei'
-import { useContext } from 'react'
+import { Euler } from '@react-three/fiber'
 import { Vector3 } from 'three'
-import {
-  NavigationContext,
-  navigationRoutes
-} from '../../../../NavigationContainer/NavigationContainer'
+import { navigationRoutes } from '../../../../NavigationContainer/NavigationContainer'
 
 const anchors = [
   {
     anchor: [0, 0, -1] as Vector3 | [number, number, number],
-    rotation: [0, 3.1, 0]
+    rotation: [0, 3.1, 0] as Euler
   },
   {
     anchor: [0, 0, 1] as Vector3 | [number, number, number],
-    rotation: [0, 0, 0]
+    rotation: [0, 0, 0] as Euler
   }
 ]
 
 export default function SmoothCube(): JSX.Element {
   const config = useThemeConfig()
-
-  const { index: contextIndex, setIndex } = useContext(NavigationContext)
 
   // add context routes and 3d text over the cube edge here
   return (
@@ -35,11 +30,7 @@ export default function SmoothCube(): JSX.Element {
               <Text3D scale={0.25} font="/fonts/inter_regular.typeface.json">
                 {item.href}
                 <meshStandardMaterial
-                  color={
-                    contextIndex === index
-                      ? config.theme?.colors?.[item.color]?.['400']
-                      : '#fff'
-                  }
+                  color={config.theme?.colors?.[item.color]?.['400']}
                 />
               </Text3D>
             </Center>

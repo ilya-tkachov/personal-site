@@ -15,6 +15,8 @@ export default function PortfolioCollectionLoadMore(props: Props): JSX.Element {
   const router = useRouter()
   const [isPending, startTransition] = useTransition()
 
+  // TODO add intersection obeserver for triggering load more automatically
+
   const onClick = (): void => {
     const loadMoreAmount = 10
     const decideLimit =
@@ -38,8 +40,8 @@ export default function PortfolioCollectionLoadMore(props: Props): JSX.Element {
 
   return (
     <div className="flex w-full h-24 items-center justify-center">
-      <Button onClick={onClick} disabled={isPending}>
-        load more
+      <Button className='bg-gray-400 text-gray-50 rounded-full' size='md' onClick={onClick} disabled={isPending}>
+        Load More
       </Button>
     </div>
   )

@@ -16,18 +16,18 @@ export default function NavigationButton(props: Props): JSX.Element {
   return (
     <Link href={href}>
       <Button
-        size='lg'
-        className='shadow-full pointer-events-auto bg-white rounded-full text-gray-700'
+        size="lg"
+        className="shadow-full pointer-events-auto bg-white rounded-full text-gray-700"
       >
-        <div className='mr-2 ring-gray-300 rounded-full ring-1 w-8 h-8'>
+        <div className="mr-2 ring-gray-300 rounded-full ring-1 w-8 h-8">
           <ShapeIconCanvas>
             <ShapeIcon shape={shape}>
               <meshPhongMaterial
                 wireframe
                 color={config?.theme?.colors.gray[700]}
-                emissive={config?.theme?.colors?.gray[900]}
+                emissive={config?.theme?.colors.gray[900]}
                 shininess={10}
-                specular={config?.theme?.colors.gray[900]}
+                specular={config?.theme?.colors.gray[500]}
               />
             </ShapeIcon>
           </ShapeIconCanvas>

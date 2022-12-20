@@ -18,15 +18,15 @@ export default function Error(props: Props) {
 
   return (
     <PageContainer>
-      <div className='flex items-center justify-center space-y-8 flex-col w-full h-64'>
+      <div className="flex items-center justify-center space-y-8 flex-col w-full h-64">
+        <div className="ring-rose-200 bg-rose-400 rounded-full ring-4 w-6 h-6" />
         <Button
-          className='bg-rose-400 rounded-full text-rose-50'
-          size='lg'
+          className="bg-rose-400 rounded-full text-rose-50"
+          size="md"
           onClick={() => reset()}
         >
           Retry
         </Button>
-        <div className='ring-rose-200 bg-rose-400 rounded-full ring-4 w-6 h-6' />
       </div>
     </PageContainer>
   )
