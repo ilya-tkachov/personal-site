@@ -9,7 +9,7 @@ export default function PageContainer(props: Props): JSX.Element {
 
   return (
     <div className="flex relative justify-center h-full w-full pointer-events-none">
-      <div className="w-full max-w-xl pointer-events-auto">{children}</div>
+      <div className="w-full max-w-2xl pointer-events-auto">{children}</div>
     </div>
   )
 }
