@@ -7,19 +7,17 @@ export default async function AboutIntroduction(): Promise<JSX.Element> {
 
   return (
     <div className='space-y-4 flex flex-col w-full'>
-      <div className='space-x-4 flex w-full'>
+      <div className='w-full flex justify-center items-center'>
         <Avatar
           src={data.about.avatar.url}
-          size='lg'
+          size='2xl'
           width={data.about.avatar.width}
           height={data.about.avatar.height}
         />
-        <div className='flex max-h-16 bg-white border-2 border-slate-100 rounded-full px-4 py-6 justify-center items-center w-full'>
-          <p className='text-2xl text-center text-gray-700 font-bold'>
-            {data.about.title}
-          </p>
-        </div>
       </div>
+      <p className='text-4xl text-gray-700 font-bold'>
+        {data.about.title}
+      </p>
       <ContentfulRichText document={data.about.description.json} />
     </div>
   )

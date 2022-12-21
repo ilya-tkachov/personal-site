@@ -16,14 +16,14 @@ export default function PageHeader(): JSX.Element {
         {pathname?.replace('/', '')}
       </p>
       <Link href="/">
-        <div className={`w-9 h-9 ring-1 ring-red-300 rounded-full`}>
+        <div className={`w-9 h-9 ring-1 ring-gray-300 rounded-full`}>
           <ShapeIconCanvas>
             <ShapeIcon shape="Dodecahedron">
               <meshPhongMaterial
-                color={config?.theme?.colors.red[500]}
-                emissive={config?.theme?.colors.red[700]}
+                color={config?.theme?.colors.gray[500]}
+                emissive={config?.theme?.colors.gray[700]}
                 shininess={50}
-                specular={config?.theme?.colors.red[700]}
+                specular={config?.theme?.colors.gray[700]}
               />
             </ShapeIcon>
           </ShapeIconCanvas>

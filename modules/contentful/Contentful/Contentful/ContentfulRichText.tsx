@@ -16,11 +16,11 @@ export default function ContentfulRichText(props: Props): ReactElement {
   const { document } = props
 
   const Bold = ({ children }) => (
-    <p className="text-md font-bold text-gray-900">{children}</p>
+    <strong className="text-md font-bold text-gray-900">{children}</strong>
   )
 
   const Text = ({ children }) => (
-    <p className="text-md text-gray-900">{children}</p>
+    <p className="text-md text-gray-700">{children}</p>
   )
 
   const options = {
@@ -32,7 +32,7 @@ export default function ContentfulRichText(props: Props): ReactElement {
         <Text>{children}</Text>
       )
     },
-    renderText: (text: string) => text.replace('!', '?')
+    // renderText: (text: string) => text.replace('!', '?')
   }
 
   return <>{documentToReactComponents(document, options)}</>

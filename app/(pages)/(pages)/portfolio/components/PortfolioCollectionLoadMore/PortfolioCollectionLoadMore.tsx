@@ -2,7 +2,7 @@
 import Button from '@/modules/components/Button/Button'
 import Spinner from '@/modules/components/Spinner/Spinner'
 import { useRouter } from 'next/navigation'
-import { useTransition } from 'react'
+import { useEffect, useRef, useTransition } from 'react'
 
 interface Props {
   limit: number
@@ -14,10 +14,10 @@ export default function PortfolioCollectionLoadMore(props: Props): JSX.Element {
 
   const router = useRouter()
   const [isPending, startTransition] = useTransition()
+  const observerRef = useRef(null)
 
-  // TODO add intersection obeserver for triggering load more automatically
-
-  const onClick = (): void => {
+  // load more function
+  const onLoadMore = (): void => {
     const loadMoreAmount = 10
     const decideLimit =
       limit + loadMoreAmount >= total ? total : limit + loadMoreAmount
@@ -25,6 +25,26 @@ export default function PortfolioCollectionLoadMore(props: Props): JSX.Element {
       router.replace(`/portfolio?limit=${decideLimit}`)
     })
   }
+
+  // load more when observing the load more button
+  useEffect(() => {
+    const callbackFn = (entries): void => {
+      const [entry] = entries
+      if (entry.isIntersecting) {
+        onLoadMore()
+      }
+    }
+
+    const observer = new IntersectionObserver(callbackFn)
+    if (observerRef.current != null) {
+      observer.observe(observerRef.current)
+    }
+    return () => {
+      if (observerRef.current != null) {
+        observer.unobserve(observerRef.current)
+      }
+    }
+  }, [observerRef, onLoadMore])
 
   if (limit >= total) {
     return <div className="flex w-full h-24 items-center justify-center" />
@@ -39,8 +59,8 @@ export default function PortfolioCollectionLoadMore(props: Props): JSX.Element {
   }
 
   return (
-    <div className="flex w-full h-24 items-center justify-center">
-      <Button className='bg-gray-400 text-gray-50 rounded-full' size='md' onClick={onClick} disabled={isPending}>
+    <div ref={observerRef} className="flex w-full h-24 items-center justify-center">
+      <Button className='bg-gray-300 text-slate-50 rounded-full' size='md' onClick={onLoadMore} disabled={isPending}>
         Load More
       </Button>
     </div>

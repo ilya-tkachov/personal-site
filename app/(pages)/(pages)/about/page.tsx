@@ -6,7 +6,7 @@ export default async function About() {
   preload_getAbout('13zjl7d9SPh4EZ7vYYLkKa')
 
   return (
-    <div className='space-y-4 flex flex-col'>
+    <div className='space-y-8 flex flex-col'>
       {/* @ts-expect-error Server Component */}
       <AboutIntroduction />
       <AboutFooter />
