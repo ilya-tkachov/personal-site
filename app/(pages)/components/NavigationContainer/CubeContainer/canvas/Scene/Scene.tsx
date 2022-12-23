@@ -1,7 +1,7 @@
-'use client'
-import { Environment, OrbitControls } from '@react-three/drei'
-import { Canvas } from '@react-three/fiber'
-import { ReactNode } from 'react'
+"use client"
+import { Environment, OrbitControls } from "@react-three/drei"
+import { Canvas } from "@react-three/fiber"
+import { ReactNode } from "react"
 
 interface Props {
   children: ReactNode

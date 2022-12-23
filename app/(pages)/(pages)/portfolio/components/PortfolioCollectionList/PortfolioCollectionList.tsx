@@ -1,9 +1,9 @@
-import { getPortfolioCollection } from '@/modules/utils/getPortfolio'
-import PortfolioCollectionLoadMore from '../PortfolioCollectionLoadMore/PortfolioCollectionLoadMore'
-import PortfolioPreview from './PortfolioPreview/PortfolioPreview'
+import { getPortfolioCollection } from "@/modules/utils/getPortfolio"
+import PortfolioCollectionLoadMore from "../PortfolioCollectionLoadMore/PortfolioCollectionLoadMore"
+import PortfolioPreview from "./PortfolioPreview/PortfolioPreview"
 
 export default async function PortfolioCollectionList(
-  props
+  props: any,
 ): Promise<JSX.Element> {
   const { searchParams } = props
 
@@ -11,7 +11,7 @@ export default async function PortfolioCollectionList(
 
   return (
     <div className="space-y-8 flex flex-col w-full">
-      {data.portfolioCollection.items.map((item) => (
+      {data.portfolioCollection.items.map((item: any) => (
         <PortfolioPreview
           key={item.sys.id}
           width={item.preview.width}

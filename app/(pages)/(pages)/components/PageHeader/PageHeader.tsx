@@ -1,10 +1,10 @@
-'use client'
+"use client"
 
-import useThemeConfig from '@/modules/hooks/useThemeConfig'
-import ShapeIcon from '@/modules/three/ShapeIcon/ShapeIcon'
-import ShapeIconCanvas from '@/modules/three/ShapeIconCanvas/ShapeIconCanvas'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import useThemeConfig from "@/modules/hooks/useThemeConfig"
+import ShapeIcon from "@/modules/three/ShapeIcon/ShapeIcon"
+import ShapeIconCanvas from "@/modules/three/ShapeIconCanvas/ShapeIconCanvas"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 export default function PageHeader(): JSX.Element {
   const pathname = usePathname()
@@ -13,7 +13,7 @@ export default function PageHeader(): JSX.Element {
   return (
     <div className="flex items-center justify-between">
       <p className={`text-gray-300 text-4xl font-bold`}>
-        {pathname?.replace('/', '')}
+        {pathname?.replace("/", "")}
       </p>
       <Link href="/">
         <div className={`w-9 h-9 ring-1 ring-gray-300 rounded-full`}>

@@ -1,3 +1,3 @@
-import Error from 'app/error'
+import Error from "app/error"
 
 export default Error

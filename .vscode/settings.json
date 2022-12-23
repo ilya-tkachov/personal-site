@@ -3,21 +3,11 @@
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "editor.formatOnSave": true,
   "editor.insertSpaces": true,
-  "eslint.validate": [
-    "typescript"
-  ],
+  "editor.formatOnPaste": true,
   "files.trimTrailingWhitespace": true,
   "editor.codeActionsOnSave": {
-    "source.organizeImports": true,
-    "source.fixAll.eslint": true
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features",
+    "source.organizeImports": true
   },
   "editor.tabSize": 2,
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "javascript.preferences.quoteStyle": "single",
-  "typescript.preferences.quoteStyle": "single"
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

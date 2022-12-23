@@ -1,6 +1,7 @@
 {
   "extends": [
     "plugin:@next/next/recommended",
+    "prettier",
     //"standard-with-typescript",
     "plugin:@typescript-eslint/recommended",
     "standard-jsx",
@@ -8,9 +9,7 @@
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": [
-      "./tsconfig.json"
-    ],
+    "project": ["./tsconfig.json"],
     "ecmaFeatures": {
       "jsx": true
     },
@@ -18,19 +17,10 @@
     "sourceType": "module"
   },
   "rules": {
-    "comma-dangle": [
-      "error",
-      "never"
-    ],
-    "quotes": [
-      "error",
-      "single"
-    ],
+    "comma-dangle": ["error", "never"],
+    "quotes": ["error", "single"],
     "react/prop-types": "off",
-    "semi": [
-      "error",
-      "never"
-    ],
+    "semi": ["error", "never"],
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/no-var-requires": "off",
     "react/no-array-index-key": "error",

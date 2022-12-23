@@ -1,17 +1,17 @@
-import Button from '@/modules/components/Button/Button'
-import useThemeConfig from '@/modules/hooks/useThemeConfig'
-import ShapeIcon, { ShapeIconProps } from '@/modules/three/ShapeIcon/ShapeIcon'
-import ShapeIconCanvas from '@/modules/three/ShapeIconCanvas/ShapeIconCanvas'
-import Link, { LinkProps } from 'next/link'
+import Button from "@/modules/components/Button/Button"
+import useThemeConfig from "@/modules/hooks/useThemeConfig"
+import ShapeIcon, { ShapeIconProps } from "@/modules/three/ShapeIcon/ShapeIcon"
+import ShapeIconCanvas from "@/modules/three/ShapeIconCanvas/ShapeIconCanvas"
+import Link, { LinkProps } from "next/link"
 
-interface Props extends Pick<LinkProps, 'href'>, Pick<ShapeIconProps, 'shape'> {
-  color: string
-}
+interface Props
+  extends Pick<LinkProps, "href">,
+    Pick<ShapeIconProps, "shape"> {}
 
 export default function NavigationButton(props: Props): JSX.Element {
-  const { href, color, shape } = props
+  const { href, shape } = props
 
-  const config = useThemeConfig()
+  const config: any = useThemeConfig()
 
   return (
     <Link href={href}>

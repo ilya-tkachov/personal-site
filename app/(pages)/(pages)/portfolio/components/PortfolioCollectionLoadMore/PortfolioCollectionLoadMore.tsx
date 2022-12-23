@@ -1,8 +1,8 @@
-'use client'
-import Button from '@/modules/components/Button/Button'
-import Spinner from '@/modules/components/Spinner/Spinner'
-import { useRouter } from 'next/navigation'
-import { useEffect, useRef, useTransition } from 'react'
+"use client"
+import Button from "@/modules/components/Button/Button"
+import Spinner from "@/modules/components/Spinner/Spinner"
+import { useRouter } from "next/navigation"
+import { useEffect, useRef, useTransition } from "react"
 
 interface Props {
   limit: number
@@ -28,7 +28,7 @@ export default function PortfolioCollectionLoadMore(props: Props): JSX.Element {
 
   // load more when observing the load more button
   useEffect(() => {
-    const callbackFn = (entries): void => {
+    const callbackFn = (entries: any): void => {
       const [entry] = entries
       if (entry.isIntersecting) {
         onLoadMore()
@@ -59,8 +59,16 @@ export default function PortfolioCollectionLoadMore(props: Props): JSX.Element {
   }
 
   return (
-    <div ref={observerRef} className="flex w-full h-24 items-center justify-center">
-      <Button className='bg-gray-300 text-slate-50 rounded-full' size='md' onClick={onLoadMore} disabled={isPending}>
+    <div
+      ref={observerRef}
+      className="flex w-full h-24 items-center justify-center"
+    >
+      <Button
+        className="bg-gray-300 text-slate-50 rounded-full"
+        size="md"
+        onClick={onLoadMore}
+        disabled={isPending}
+      >
         Load More
       </Button>
     </div>

@@ -1,8 +1,8 @@
-'use client'
+"use client"
 
-import Button from '@/modules/components/Button/Button'
-import PageContainer from '@/modules/components/PageContainer/PageContainer'
-import { useEffect } from 'react'
+import Button from "@/modules/components/Button/Button"
+import PageContainer from "@/modules/components/PageContainer/PageContainer"
+import { useEffect } from "react"
 
 interface Props {
   error: Error

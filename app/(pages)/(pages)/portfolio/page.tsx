@@ -1,5 +1,5 @@
-import { preload_getPortfolioCollection } from '@/modules/utils/getPortfolio'
-import PortfolioCollectionList from './components/PortfolioCollectionList/PortfolioCollectionList'
+import { preload_getPortfolioCollection } from "@/modules/utils/getPortfolio"
+import PortfolioCollectionList from "./components/PortfolioCollectionList/PortfolioCollectionList"
 
 export default async function Portfolio(props) {
   const { searchParams } = props

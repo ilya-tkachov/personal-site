@@ -1,12 +1,12 @@
-'use client'
+"use client"
 
-import { useRouter } from 'next/navigation'
+import { useRouter } from "next/navigation"
 
 export default function PageBlur(): JSX.Element {
   const router = useRouter()
 
   const onClick = (): void => {
-    router.push('/')
+    router.push("/")
   }
 
   return (

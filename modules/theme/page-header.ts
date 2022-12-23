@@ -1,14 +1,14 @@
 export const colorThemes = {
-  "amber": {
-    heading: 'text-amber-300',
-    button: 'ring-amber-300'
+  amber: {
+    heading: "text-amber-300",
+    button: "ring-amber-300",
   },
-  "indigo": {
+  indigo: {
     heading: "text-indigo-300",
-    button: 'ring-indigo-300'
+    button: "ring-indigo-300",
   },
-  "pink": {
+  pink: {
     heading: "text-pink-300",
-    button: 'ring-pink-300'
-  }
+    button: "ring-pink-300",
+  },
 }

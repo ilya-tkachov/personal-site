@@ -1,5 +1,5 @@
-import { avatarSizes, AvatarSizes } from '@/modules/theme/avatar'
-import Image from 'next/image'
+import { avatarSizes, AvatarSizes } from "@/modules/theme/avatar"
+import Image from "next/image"
 
 interface Props {
   src: string
@@ -17,7 +17,7 @@ export default function Avatar(props: Props): JSX.Element {
     <div
       className={`flex flex-shrink-0 bg-slate-300 rounded-3xl border-2 border-white ring-2 ring-indigo-300 overflow-hidden ${avatarSize}`}
     >
-      <Image alt="" src={src} priority height={height} width={width} />
+      <Image alt="Avatar" src={src} priority height={height} width={width} />
     </div>
   )
 }

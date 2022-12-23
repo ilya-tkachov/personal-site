@@ -1,6 +1,6 @@
-import Button from '@/modules/components/Button/Button'
-import ExternalLink from '@/modules/components/ExternalLink/ExternalLink'
-import { EMAIL, LINKEDIN } from '@/modules/constants'
+import Button from "@/modules/components/Button/Button"
+import ExternalLink from "@/modules/components/ExternalLink/ExternalLink"
+import { EMAIL, LINKEDIN } from "@/modules/constants"
 
 export default function AboutFooter(): JSX.Element {
   return (

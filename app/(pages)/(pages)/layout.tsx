@@ -1,10 +1,10 @@
-'use client'
-import PageContainer from '@/modules/components/PageContainer/PageContainer'
-import PageContents from '@/modules/components/PageContents/PageContents'
-import PageHeader from './components/PageHeader/PageHeader'
+"use client"
+import PageContainer from "@/modules/components/PageContainer/PageContainer"
+import PageContents from "@/modules/components/PageContents/PageContents"
+import PageHeader from "./components/PageHeader/PageHeader"
 
-import PageBlur from '@/modules/components/PageBlur/PageBlur'
-import { ReactNode } from 'react'
+import PageBlur from "@/modules/components/PageBlur/PageBlur"
+import { ReactNode } from "react"
 
 interface Props {
   children: ReactNode
@@ -18,7 +18,7 @@ export default function PagesLayout(props: Props) {
       <PageBlur />
       <PageContainer>
         <PageContents>
-          <div className='space-y-8 flex flex-col h-min-full'>
+          <div className="space-y-8 flex flex-col h-min-full">
             <PageHeader />
             {children}
           </div>

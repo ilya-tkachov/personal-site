@@ -1,10 +1,10 @@
-import { ReactNode } from 'react'
-import '../styles/dist.css'
-import { Inter } from '@next/font/google'
+import { ReactNode } from "react"
+import "../styles/dist.css"
+import { Inter } from "@next/font/google"
 
 const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter'
+  subsets: ["latin"],
+  variable: "--font-inter",
 })
 
 interface Props {

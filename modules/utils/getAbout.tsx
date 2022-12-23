@@ -1,6 +1,6 @@
-import { cache } from 'react'
-import 'server-only'
-import { fetchGraphQL } from '../api/support'
+import { cache } from "react"
+import "server-only"
+import { fetchGraphQL } from "../api/support"
 
 export const preload_getAbout = (id: string) => {
   void getAbout(id)
