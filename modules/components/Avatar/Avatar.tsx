@@ -15,7 +15,7 @@ export default function Avatar(props: Props): JSX.Element {
 
   return (
     <div
-      className={`flex flex-shrink-0 bg-slate-300 rounded-3xl border-2 border-white ring-2 ring-indigo-300 overflow-hidden ${avatarSize}`}
+      className={`flex flex-shrink-0 bg-slate-300 rounded-3xl border-2 border-white ring-4 ring-indigo-300 overflow-hidden ${avatarSize}`}
     >
       <Image alt="Avatar" src={src} priority height={height} width={width} />
     </div>

@@ -571,6 +571,10 @@ video {
   position: fixed;
 }
 
+.absolute {
+  position: absolute;
+}
+
 .relative {
   position: relative;
 }
@@ -589,6 +593,26 @@ video {
 
 .left-0 {
   left: 0px;
+}
+
+.top-2 {
+  top: 0.5rem;
+}
+
+.right-2 {
+  right: 0.5rem;
+}
+
+.left-2 {
+  left: 0.5rem;
+}
+
+.top-1 {
+  top: 0.25rem;
+}
+
+.left-1 {
+  left: 0.25rem;
 }
 
 .mr-2 {
@@ -762,6 +786,10 @@ video {
   overflow: hidden;
 }
 
+.overflow-visible {
+  overflow: visible;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
@@ -823,6 +851,14 @@ video {
 
 .bg-white\/75 {
   background-color: rgb(255 255 255 / 0.75);
+}
+
+.stroke-gray-300 {
+  stroke: #d1d5db;
+}
+
+.stroke-2 {
+  stroke-width: 2;
 }
 
 .p-1 {
@@ -922,6 +958,10 @@ video {
   font-weight: 700;
 }
 
+.font-normal {
+  font-weight: 400;
+}
+
 .text-rose-50 {
   --tw-text-opacity: 1;
   color: rgb(255 241 242 / var(--tw-text-opacity));
@@ -975,6 +1015,20 @@ video {
 .text-gray-900 {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
+.text-gray-100 {
+  --tw-text-opacity: 1;
+  color: rgb(243 244 246 / var(--tw-text-opacity));
+}
+
+.text-gray-200 {
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
+}
+
+.text-gray-300\/50 {
+  color: rgb(209 213 219 / 0.5);
 }
 
 .underline {
@@ -1055,6 +1109,24 @@ video {
   transition-duration: 150ms;
 }
 
+.transition-\[font-weight\] {
+  transition-property: font-weight;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-\[text-decoration-thickness\] {
+  transition-property: text-decoration-thickness;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-\[font-weight\2c text-decoration-thickness\] {
+  transition-property: font-weight,text-decoration-thickness;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .duration-150 {
   transition-duration: 150ms;
 }
@@ -1096,6 +1168,10 @@ ul {
 button {
   padding: 0.5rem 1rem;
   font-weight: bold;
+}
+
+.focus\:font-bold:focus {
+  font-weight: 700;
 }
 
 .focus\:decoration-2:focus {
