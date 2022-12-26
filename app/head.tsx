@@ -21,7 +21,7 @@ export default function Head() {
         sizes="16x16"
         href="/favicon-16x16.png"
       />
-      <meta property="og:image" content={`${process.env.url}/api/og`} />
+      <meta property="og:image" content={`${process.env.APP_URL}/api/og`} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="600" />
