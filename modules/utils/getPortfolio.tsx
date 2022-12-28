@@ -26,6 +26,7 @@ export const getPortfolioCollection = cache(async (limit: string = "5") => {
           description {
             json
           }
+          tags
         }
       }
     }

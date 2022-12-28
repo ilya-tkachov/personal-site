@@ -10,7 +10,7 @@ export default async function PortfolioCollectionList(
   const data = await getPortfolioCollection(searchParams.limit ?? 5)
 
   return (
-    <div className="space-y-8 flex flex-col w-full">
+    <div className="space-y-16 flex flex-col w-full">
       {data.portfolioCollection.items.map((item: any) => (
         <PortfolioPreview
           key={item.sys.id}
@@ -19,6 +19,7 @@ export default async function PortfolioCollectionList(
           description={item.description.json}
           title={item.title}
           src={item.preview.url}
+          tags={item.tags}
         />
       ))}
       <PortfolioCollectionLoadMore
