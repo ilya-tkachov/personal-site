@@ -28,14 +28,12 @@ export default function SmoothCube(): JSX.Element {
             <Center rotation={anchors[index].rotation}>
               <Text3D scale={0.25} font="/fonts/inter_regular.typeface.json">
                 {item.href}
-                <meshStandardMaterial
-                  color={config.theme?.colors?.[item.color]?.["400"]}
-                />
+                <meshStandardMaterial color={config.theme?.colors?.white} />
               </Text3D>
             </Center>
           </BBAnchor>
         ))}
-        <meshStandardMaterial color="#fff" />
+        <meshStandardMaterial color={config.theme?.colors?.black} />
       </RoundedBox>
     </mesh>
   )
