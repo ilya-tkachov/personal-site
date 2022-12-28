@@ -9,6 +9,8 @@ export default async function PortfolioCollectionList(
 
   const data = await getPortfolioCollection(searchParams.limit ?? 5)
 
+  console.log(JSON.stringify(data))
+
   return (
     <div className="space-y-16 flex flex-col w-full">
       {data.portfolioCollection.items.map((item: any) => (
