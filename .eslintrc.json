@@ -1,7 +1,6 @@
 {
   "extends": [
     "plugin:@next/next/recommended",
-    "prettier",
     //"standard-with-typescript",
     "plugin:@typescript-eslint/recommended",
     "standard-jsx",
@@ -18,12 +17,12 @@
   },
   "rules": {
     "comma-dangle": ["error", "never"],
-    "quotes": ["error", "single"],
     "react/prop-types": "off",
     "semi": ["error", "never"],
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/no-var-requires": "off",
     "react/no-array-index-key": "error",
+    "react/no-unknown-property": ["error", { "ignore": ["tw"] }],
     "react/jsx-max-props-per-line": [
       1,
       {

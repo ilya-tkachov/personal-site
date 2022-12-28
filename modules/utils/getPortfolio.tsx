@@ -1,12 +1,12 @@
-import { cache } from "react"
-import "server-only"
-import { fetchGraphQL } from "../api/support"
+import { cache } from 'react'
+import 'server-only'
+import { fetchGraphQL } from '../api/support'
 
 export const preload_getPortfolioCollection = (limit: string) => {
   void getPortfolioCollection(limit)
 }
 
-export const getPortfolioCollection = cache(async (limit: string = "5") => {
+export const getPortfolioCollection = cache(async (limit: string = '5') => {
   const query = `
     query portfolioCollectionQuery($limit: Int!) {
       portfolioCollection(limit: $limit) {

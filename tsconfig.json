@@ -36,7 +36,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "contentful/setup.js"
+    "contentful/setup.js",
+    "pages/api/og.tsx.example"
   ],
   "exclude": ["node_modules"]
 }

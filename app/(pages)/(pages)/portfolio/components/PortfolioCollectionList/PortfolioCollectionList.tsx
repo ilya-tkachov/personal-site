@@ -1,18 +1,16 @@
-import { getPortfolioCollection } from "@/modules/utils/getPortfolio"
-import PortfolioCollectionLoadMore from "../PortfolioCollectionLoadMore/PortfolioCollectionLoadMore"
-import PortfolioPreview from "./PortfolioPreview/PortfolioPreview"
+import { getPortfolioCollection } from '@/modules/utils/getPortfolio'
+import PortfolioCollectionLoadMore from '../PortfolioCollectionLoadMore/PortfolioCollectionLoadMore'
+import PortfolioPreview from './PortfolioPreview/PortfolioPreview'
 
 export default async function PortfolioCollectionList(
-  props: any,
+  props: any
 ): Promise<JSX.Element> {
-  const { searchParams } = props
+  const data = await getPortfolioCollection('10')
 
-  const data = await getPortfolioCollection(searchParams.limit ?? 5)
-
-  console.log(JSON.stringify(data))
+  // TODO wait for Nextjs to fix searchParams bug so you can use load more component
 
   return (
-    <div className="space-y-16 flex flex-col w-full">
+    <div className='space-y-16 flex flex-col w-full'>
       {data.portfolioCollection.items.map((item: any) => (
         <PortfolioPreview
           key={item.sys.id}

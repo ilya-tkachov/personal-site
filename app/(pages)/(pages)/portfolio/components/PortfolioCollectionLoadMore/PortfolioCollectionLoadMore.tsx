@@ -1,8 +1,8 @@
-"use client"
-import Button from "@/modules/components/Button/Button"
-import Spinner from "@/modules/components/Spinner/Spinner"
-import { useRouter } from "next/navigation"
-import { useEffect, useRef, useTransition } from "react"
+'use client'
+import Button from '@/modules/components/Button/Button'
+import Spinner from '@/modules/components/Spinner/Spinner'
+import { useRouter } from 'next/navigation'
+import { useEffect, useRef, useState, useTransition } from 'react'
 
 interface Props {
   limit: number
@@ -14,15 +14,19 @@ export default function PortfolioCollectionLoadMore(props: Props): JSX.Element {
 
   const router = useRouter()
   const [isPending, startTransition] = useTransition()
+  const [isFetching, setIsFetching] = useState(false)
   const observerRef = useRef(null)
 
   // load more function
   const onLoadMore = (): void => {
+    setIsFetching(true)
     const loadMoreAmount = 10
     const decideLimit =
       limit + loadMoreAmount >= total ? total : limit + loadMoreAmount
+    router.replace(`/portfolio?limit=${decideLimit}`)
+    setIsFetching(false)
     startTransition(() => {
-      router.replace(`/portfolio?limit=${decideLimit}`)
+      router.refresh()
     })
   }
 
@@ -47,13 +51,13 @@ export default function PortfolioCollectionLoadMore(props: Props): JSX.Element {
   }, [observerRef, onLoadMore])
 
   if (limit >= total) {
-    return <div className="flex w-full h-24 items-center justify-center" />
+    return <div className='flex w-full h-24 items-center justify-center' />
   }
 
-  if (isPending) {
+  if (isPending || isFetching) {
     return (
-      <div className="flex w-full h-24 items-center justify-center">
-        <Spinner size="sm" />
+      <div className='flex w-full h-24 items-center justify-center'>
+        <Spinner size='sm' />
       </div>
     )
   }
@@ -61,11 +65,11 @@ export default function PortfolioCollectionLoadMore(props: Props): JSX.Element {
   return (
     <div
       ref={observerRef}
-      className="flex w-full h-24 items-center justify-center"
+      className='flex w-full h-24 items-center justify-center'
     >
       <Button
-        className="bg-gray-300 text-slate-50 rounded-full"
-        size="md"
+        className='bg-gray-300 text-slate-50 rounded-full'
+        size='md'
         onClick={onLoadMore}
         disabled={isPending}
       >
