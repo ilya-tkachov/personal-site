@@ -10,7 +10,7 @@ export default function Home() {
         </ExternalLink>
       </div>
       <div className='flex pointer-events-none fixed items-center justify-center left-0 bottom-0 '>
-        <p className='p-1 text-xs text-black'>www.ilyatkachov.com</p>
+        <p className='p-1 text-xs text-black'>ilyatkachov.com</p>
       </div>
     </>
   )
