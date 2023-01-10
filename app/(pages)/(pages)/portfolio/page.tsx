@@ -4,7 +4,7 @@ import PortfolioCollectionList from './components/PortfolioCollectionList/Portfo
 // TODO searchParams undefined in production but exists in dev - wait for bug to be fixed
 
 export default async function Portfolio() {
-  preload_getPortfolioCollection('15')
+  preload_getPortfolioCollection('20')
 
   return (
     <div className='space-y-4 flex flex-col'>
