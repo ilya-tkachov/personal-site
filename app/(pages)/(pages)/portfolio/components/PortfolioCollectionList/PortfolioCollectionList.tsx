@@ -9,6 +9,7 @@ export default async function PortfolioCollectionList(
 
   // TODO wait for Nextjs to fix searchParams bug so you can use load more component
 
+  //
   return (
     <div className='space-y-16 flex flex-col w-full'>
       {data.portfolioCollection.items.map((item: any) => (
