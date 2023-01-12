@@ -1,20 +1,20 @@
-"use client"
+'use client'
 
-import useThemeConfig from "@/modules/hooks/useThemeConfig"
-import { BBAnchor, Center, RoundedBox, Text3D } from "@react-three/drei"
-import { Euler } from "@react-three/fiber"
-import { Vector3 } from "three"
-import { navigationRoutes } from "../../../../NavigationContainer/NavigationContainer"
+import { navigationRoutes } from '@/modules/constants'
+import useThemeConfig from '@/modules/hooks/useThemeConfig'
+import { BBAnchor, Center, RoundedBox, Text3D } from '@react-three/drei'
+import { Euler } from '@react-three/fiber'
+import { Vector3 } from 'three'
 
 const anchors = [
   {
     anchor: [0, 0, -1] as Vector3 | [number, number, number],
-    rotation: [0, 3.1, 0] as Euler,
+    rotation: [0, 3.1, 0] as Euler
   },
   {
     anchor: [0, 0, 1] as Vector3 | [number, number, number],
-    rotation: [0, 0, 0] as Euler,
-  },
+    rotation: [0, 0, 0] as Euler
+  }
 ]
 
 export default function SmoothCube(): JSX.Element {
@@ -26,7 +26,7 @@ export default function SmoothCube(): JSX.Element {
         {navigationRoutes.map((item, index) => (
           <BBAnchor key={item.href} anchor={anchors[index].anchor}>
             <Center rotation={anchors[index].rotation}>
-              <Text3D scale={0.25} font="/fonts/inter_regular.typeface.json">
+              <Text3D scale={0.25} font='/fonts/inter_regular.typeface.json'>
                 {item.href}
                 <meshStandardMaterial color={config.theme?.colors?.white} />
               </Text3D>
