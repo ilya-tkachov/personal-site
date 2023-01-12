@@ -11,7 +11,7 @@ export default async function PortfolioCollectionList(
 
   //
   return (
-    <div className='space-y-16 flex flex-col w-full'>
+    <div className='space-y-24 flex flex-col w-full'>
       {data.portfolioCollection.items.map((item: any) => (
         <PortfolioPreview
           key={item.sys.id}

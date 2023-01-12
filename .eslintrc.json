@@ -20,6 +20,13 @@
     "react/prop-types": "off",
     "semi": ["error", "never"],
     "react/react-in-jsx-scope": "off",
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": true,
+        "html": true
+      }
+    ],
     "@typescript-eslint/no-var-requires": "off",
     "react/no-array-index-key": "error",
     "react/no-unknown-property": ["error", { "ignore": ["tw"] }],

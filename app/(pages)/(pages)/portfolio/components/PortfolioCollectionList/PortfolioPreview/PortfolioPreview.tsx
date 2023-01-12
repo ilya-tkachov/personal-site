@@ -17,15 +17,13 @@ export default function PortfolioPreview(props: Props): JSX.Element {
 
   return (
     <div className='space-y-2 flex flex-col w-full'>
-      <p className='text-xl text-gray-700 font-bold'>{title}</p>
+      <p className='text-xl text-white'>{title}</p>
       <div
-        className={`flex flex-shrink-0 p-1 bg-slate-100 rounded-md w-full h-max-36`}
+        className={`rounded-lg w-full h-full border border-white overflow-hidden`}
       >
-        <div className={`rounded-md w-full h-full overflow-hidden`}>
-          <Image alt={title} src={src} priority height={height} width={width} />
-        </div>
+        <Image alt={title} src={src} priority height={height} width={width} />
       </div>
-      <div className='inline-block p-1 bg-slate-100 rounded-md'>
+      <div>
         {tags.map((item) => (
           <Badge key={item}>{item}</Badge>
         ))}

@@ -10,17 +10,20 @@ import { ReactElement, ReactNode } from 'react'
 
 interface Props {
   document: Document
+  className?: string
 }
 
 export default function ContentfulRichText(props: Props): ReactElement {
-  const { document } = props
+  const { document, className = '' } = props
 
   const Bold = ({ children }) => (
-    <strong className='text-md font-bold text-gray-900'>{children}</strong>
+    <strong className={`text-md font-semibold text-white ${className}`}>
+      {children}
+    </strong>
   )
 
   const Text = ({ children }) => (
-    <p className='text-md text-gray-700'>{children}</p>
+    <p className={`text-md font-normal text-white ${className}`}>{children}</p>
   )
 
   const options = {

@@ -1,17 +1,17 @@
-import ExternalLink from '@/modules/components/ExternalLink/ExternalLink'
-import { GITHUB } from '@/modules/constants'
+import { preload_getAbout } from '@/modules/utils/getAbout'
+import AboutIntroduction from './components/AboutIntroduction/AboutIntroduction'
+import AboutLinks from './components/AboutLinks/AboutLinks'
+import AboutRoutes from './components/AboutRoutes/AboutRoutes'
 
 export default function Home() {
+  preload_getAbout('13zjl7d9SPh4EZ7vYYLkKa')
+
   return (
-    <>
-      <div className='flex fixed items-center justify-center left-0 top-0'>
-        <ExternalLink href={GITHUB}>
-          <p className='p-1 text-xs text-black'>github</p>
-        </ExternalLink>
-      </div>
-      <div className='flex pointer-events-none fixed items-center justify-center left-0 bottom-0 '>
-        <p className='p-1 text-xs text-black'>ilyatkachov.com</p>
-      </div>
-    </>
+    <div className='space-y-16 flex flex-col pb-8'>
+      {/* @ts-expect-error Server Component */}
+      <AboutIntroduction />
+      <AboutLinks />
+      <AboutRoutes />
+    </div>
   )
 }

@@ -1,8 +1,8 @@
-"use client"
+'use client'
 
-import Button from "@/modules/components/Button/Button"
-import PageContainer from "@/modules/components/PageContainer/PageContainer"
-import { useEffect } from "react"
+import Button from '@/modules/components/Button/Button'
+import PageContainer from '@/modules/components/PageContainer/PageContainer'
+import { useEffect } from 'react'
 
 interface Props {
   error: Error
@@ -18,11 +18,11 @@ export default function Error(props: Props) {
 
   return (
     <PageContainer>
-      <div className="flex items-center justify-center space-y-8 flex-col w-full h-64">
-        <div className="ring-rose-200 bg-rose-400 rounded-full ring-4 w-6 h-6" />
+      <div className='flex items-center justify-center space-y-8 flex-col w-full h-64'>
+        <div className=' bg-red-500 rounded-full w-6 h-6' />
         <Button
-          className="bg-rose-400 rounded-full text-rose-50"
-          size="md"
+          className='bg-red-500 rounded-full text-red-50'
+          size='md'
           onClick={() => reset()}
         >
           Retry

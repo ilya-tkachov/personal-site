@@ -1,36 +1,32 @@
-"use client"
+'use client'
 
-import useThemeConfig from "@/modules/hooks/useThemeConfig"
-import ShapeIcon from "@/modules/three/ShapeIcon/ShapeIcon"
-import ShapeIconCanvas from "@/modules/three/ShapeIconCanvas/ShapeIconCanvas"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
+import ShapeIcon from '@/modules/three/ShapeIcon/ShapeIcon'
+import ShapeIconCanvas from '@/modules/three/ShapeIconCanvas/ShapeIconCanvas'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 export default function PageHeader(): JSX.Element {
   const pathname = usePathname()
-  const config = useThemeConfig()
 
-  const pathLabel = pathname?.replace("/", "")
+  const pathLabel = pathname?.replace('/', '')
 
   return (
-    <div className="flex items-center justify-between overflow-visible">
-      <div className="relative overflow-visible">
-        <p className={`text-gray-100 text-4xl font-bold absolute top-1 left-1`}>
-          {pathLabel}
-        </p>
-        <p className={`text-gray-300 text-4xl font-bold relative`}>
-          {pathLabel}
-        </p>
-      </div>
-      <Link href="/">
-        <div className={`w-9 h-9 ring-1 ring-gray-300 rounded-full`}>
+    <div className='flex w-full items-center justify-between'>
+      <p className={`text-white italic text-5xl font-thin uppercase`}>
+        {pathLabel}
+      </p>
+      <Link href='/'>
+        <div
+          className={`w-12 h-12 border border-white rounded-2xl overflow-visible`}
+        >
           <ShapeIconCanvas>
-            <ShapeIcon shape="Dodecahedron">
+            <ShapeIcon shape='Box'>
               <meshPhongMaterial
-                color={config?.theme?.colors.gray[500]}
-                emissive={config?.theme?.colors.gray[700]}
-                shininess={50}
-                specular={config?.theme?.colors.gray[700]}
+                wireframe
+                color={'#fff'}
+                emissive={'#fff'}
+                shininess={10}
+                specular={'#fff'}
               />
             </ShapeIcon>
           </ShapeIconCanvas>

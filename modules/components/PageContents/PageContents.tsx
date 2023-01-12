@@ -1,4 +1,4 @@
-import { ReactNode } from "react"
+import { ReactNode } from 'react'
 
 interface Props {
   children: ReactNode
@@ -7,9 +7,5 @@ interface Props {
 export default function PageContents(props: Props): JSX.Element {
   const { children } = props
 
-  return (
-    <div className="p-2 bg-white min-h-screen overflow-hidden rounded-sm py-2">
-      {children}
-    </div>
-  )
+  return <div className='min-h-screen overflow-hidden'>{children}</div>
 }
