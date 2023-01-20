@@ -5,7 +5,9 @@ import PortfolioPreview from './PortfolioPreview/PortfolioPreview'
 export default async function PortfolioCollectionList(
   props: any
 ): Promise<JSX.Element> {
-  const data = await getPortfolioCollection('20')
+  const { searchParams } = props
+
+  const data = await getPortfolioCollection(searchParams?.limit ?? '7')
 
   // TODO wait for Nextjs to fix searchParams bug so you can use load more component
 

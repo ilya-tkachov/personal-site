@@ -18,10 +18,9 @@ export default function Error(props: Props) {
 
   return (
     <PageContainer>
-      <div className='flex items-center justify-center space-y-8 flex-col w-full h-64'>
-        <div className=' bg-red-500 rounded-full w-6 h-6' />
+      <div className='flex items-center justify-center flex-col w-full h-64'>
         <Button
-          className='bg-red-500 rounded-full text-red-50'
+          className='bg-orange-400 rounded-full text-orange-50'
           size='md'
           onClick={() => reset()}
         >

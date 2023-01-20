@@ -21,7 +21,7 @@ export default function Button(props: ButtonProps): JSX.Element {
 
   return (
     <button className={`${buttonClass} ${className}`} {...rest}>
-      {variant === 'link' ? `[${children}]` : children}
+      {children}
     </button>
   )
 }

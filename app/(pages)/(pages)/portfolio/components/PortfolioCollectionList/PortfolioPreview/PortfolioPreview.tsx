@@ -18,9 +18,7 @@ export default function PortfolioPreview(props: Props): JSX.Element {
   return (
     <div className='space-y-2 flex flex-col w-full'>
       <p className='text-xl text-white'>{title}</p>
-      <div
-        className={`rounded-lg w-full h-full border border-white overflow-hidden`}
-      >
+      <div className={`rounded-lg w-full h-full overflow-hidden`}>
         <Image alt={title} src={src} priority height={height} width={width} />
       </div>
       <div>

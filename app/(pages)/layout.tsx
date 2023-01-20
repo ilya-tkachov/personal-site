@@ -10,13 +10,13 @@ export default function Layout(props: Props) {
   // TODO add 3d component in background
 
   return (
-    <div className='flex justify-center relative py-8 h-full w-full'>
-      <div className='flex justify-center absolute h-full pb-8 w-full max-sm:hidden'>
-        <div className='flex justify-center rounded-2xl h-full max-w-3xl min-w-3xl w-full p-6 border border-white'>
+    <div className='flex flex-col justify-center items-center relative py-8 pb-16 h-full w-full'>
+      <div className='flex justify-center absolute h-full py-8 w-full max-lg:hidden'>
+        <div className='flex justify-center rounded-2xl h-full max-w-4xl min-w-4xl w-full p-6 border border-white'>
           <div className='h-full rounded-2xl w-full border border-white'></div>
         </div>
       </div>
-      <div className='relative w-full max-w-lg pt-16 max-sm:pt-0 max-sm:px-2'>
+      <div className='w-full relative max-w-3xl pt-16 max-lg:pt-0 max-lg:px-2'>
         {children}
       </div>
     </div>

@@ -7,7 +7,7 @@ export default function Home() {
   preload_getAbout('13zjl7d9SPh4EZ7vYYLkKa')
 
   return (
-    <div className='space-y-16 flex flex-col pb-8'>
+    <div className='space-y-16 flex flex-col pb-16 max-lg:pb-0'>
       {/* @ts-expect-error Server Component */}
       <AboutIntroduction />
       <AboutLinks />

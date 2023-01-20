@@ -14,7 +14,7 @@ export default async function AboutIntroduction(): Promise<JSX.Element> {
       <div className='w-full flex items-center justify-between'>
         <div className='max-w-[200px]'>
           <p className='text-4xl text-white font-thin'>{data.about.title}</p>
-          <p className='text-8xl text-white font-bold'>{data.about.name}</p>
+          <p className='text-8xl text-red-500 font-bold'>{data.about.name}</p>
         </div>
         <div className='relative'>
           <div className={`${getAvatarSize} border relative rounded-3xl`} />
@@ -30,7 +30,7 @@ export default async function AboutIntroduction(): Promise<JSX.Element> {
       <div className='space-y-8'>
         <ContentfulRichText
           document={data.about.description.json}
-          className='text-2xl'
+          className='text-xl'
         />
       </div>
     </div>

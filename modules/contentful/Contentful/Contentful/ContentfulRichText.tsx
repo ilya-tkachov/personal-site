@@ -4,6 +4,7 @@ import {
   BLOCKS,
   Document,
   Inline,
+  INLINES,
   MARKS
 } from '@contentful/rich-text-types'
 import { ReactElement, ReactNode } from 'react'
@@ -17,7 +18,7 @@ export default function ContentfulRichText(props: Props): ReactElement {
   const { document, className = '' } = props
 
   const Bold = ({ children }) => (
-    <strong className={`text-md font-semibold text-white ${className}`}>
+    <strong className={`text-md font-medium text-red-500 ${className}`}>
       {children}
     </strong>
   )
@@ -33,6 +34,11 @@ export default function ContentfulRichText(props: Props): ReactElement {
     renderNode: {
       [BLOCKS.PARAGRAPH]: (node: Block | Inline, children: ReactNode) => (
         <Text>{children}</Text>
+      ),
+      [INLINES.HYPERLINK]: (node: any, children: any) => (
+        <a className='text-red-400 underline' href={node.content[0].value}>
+          {children}
+        </a>
       )
     }
     // renderText: (text: string) => text.replace('!', '?')

@@ -9,8 +9,9 @@ export const buttonSizes = {
 }
 
 export const buttonVariants = {
-  solid: 'focus:ring-4 focus:ring-white/25 font-bold',
-  link: 'p-0 px-0 py-0 h-auto text-normal font-normal focus:font-bold transition-[font-weight,text-decoration-thickness]'
+  solid: 'focus:ring-2 focus:ring-white/25 font-semibold',
+  outline: 'focus:ring-2 focus:ring-white/25 font-normal border',
+  link: 'p-0 px-0 py-0 h-auto text-normal underline font-normal focus:font-bold transition-[font-weight,text-decoration-thickness]'
 }
 
 export type ButtonSizes = keyof typeof buttonSizes
