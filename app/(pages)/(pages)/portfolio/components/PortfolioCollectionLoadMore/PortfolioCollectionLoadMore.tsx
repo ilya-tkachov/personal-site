@@ -68,7 +68,7 @@ export default function PortfolioCollectionLoadMore(props: Props): JSX.Element {
       className='flex w-full h-24 items-center justify-center'
     >
       <Button
-        className='bg-gray-300 text-slate-50 rounded-full'
+        className='bg-red-500 text-red-50 rounded-full'
         size='md'
         onClick={onLoadMore}
         disabled={isPending}

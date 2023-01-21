@@ -18,7 +18,8 @@ export async function fetchGraphQL(
       body: JSON.stringify({
         query,
         variables: { ...variables, preview }
-      })
+      }),
+      next: { revalidate: 60 }
     }
   )
 
