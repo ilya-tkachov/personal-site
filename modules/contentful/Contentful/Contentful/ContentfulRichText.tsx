@@ -36,7 +36,11 @@ export default function ContentfulRichText(props: Props): ReactElement {
         <Text>{children}</Text>
       ),
       [INLINES.HYPERLINK]: (node: any, children: any) => (
-        <a className='text-red-400 underline' href={node.content[0].value}>
+        <a
+          target='_blank'
+          className='text-red-400 underline'
+          href={node.data.uri}
+        >
           {children}
         </a>
       )
